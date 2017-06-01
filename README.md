@@ -46,7 +46,10 @@ Now that Pipelight is fully configured, the only thing left to do is update Fire
 
 Configuring Firefox
 
-User Agent Switcher Firefox extension (https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) tool quickly changes the about:config, the User-Agent header & navigator.userAgent. For Firefox 57 below this extension is hosted on Github https://github.com/muzuiget/user_agent_overrider 
+User Agent Switcher Firefox extension (https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) tool quickly changes the about:config, the User-Agent header & navigator.userAgent.
+
+*For Firefox 57 below use this extension (https://addons.mozilla.org/en-US/firefox/addon/user-agent-overrider/)
+Hosted on Github https://github.com/muzuiget/user_agent_overrider 
 
 After installation, you should click on User Agent Switcher toolbar button, select a User-Agent “Windows / Edge” in the popup menu.
 
