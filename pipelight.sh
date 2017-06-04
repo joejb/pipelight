@@ -1,21 +1,32 @@
-#!/bin/bash
+#!/bin/sh
+{
+    echo "This script requires sudo."
+    echo "You will be prompted for your password."
 
-sudo add-apt-repository ppa:pipelight/stable
+    # clear any previous sudo permission
+    sudo -k
 
-sudo apt-get update
+    # run inside sudo
+    sudo sh <<SCRIPT
+    
+    add-apt-repository ppa:pipelight/stable
 
-sudo apt-get install --install-recommends pipelight-multi
+    apt-get update
 
-sudo pipelight-plugin --update
+    apt-get install --install-recommends pipelight-multi
 
-sudo apt-get remove adobe-flashplugin
+    pipelight-plugin --update
 
-sudo pipelight-plugin --enable flash
+    apt-get remove adobe-flashplugin
 
-sudo pipelight-plugin --enable widevine
+    pipelight-plugin --enable flash
 
-sudo pipelight-plugin --enable silverlight
+    pipelight-plugin --enable widevine
 
-sudo pipelight-plugin --update
+    pipelight-plugin --enable silverlight
 
-sudo pipelight-plugin --create-mozilla-plugins
+    pipelight-plugin --update
+
+    pipelight-plugin --create-mozilla-plugins    
+SCRIPT
+}
